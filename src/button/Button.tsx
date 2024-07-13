@@ -1,5 +1,5 @@
 import { MouseEventHandler } from "react";
-import styled from "styled-components";
+import { tv } from "tailwind-variants";
 
 export type ButtonProps = {
   label: string;
@@ -8,14 +8,17 @@ export type ButtonProps = {
   onClick?: MouseEventHandler<HTMLButtonElement>;
 };
 
-const StyledButton = styled.button<Partial<ButtonProps>>`
-  background-color: ${({ primary }) => (primary ? "blue" : "yellow")};
-  border: none;
-  border-radius: 8px;
-  color: ${({ primary }) => (primary ? "#f1f1f1" : "#555555")};
-  cursor: pointer;
-  padding: 1rem 2rem;
-`;
+const buttonVariants = tv({
+  base: "rounded-md py-sm px-xl cursor-pointer active:opacity-80",
+  variants: {
+    type: {
+      primary:
+        "bg-accentPrimary text-accentSecondary hover:bg-accentPrimaryHover",
+      secondary:
+        "bg-white text-accentPrimary border-2 hover:bg-accentSecondary",
+    },
+  },
+});
 
 const Button = ({
   label,
@@ -25,14 +28,14 @@ const Button = ({
   ...otherProps
 }: ButtonProps) => {
   return (
-    <StyledButton
+    <button
+      className={buttonVariants({ type: primary ? "primary" : "secondary" })}
       disabled={disabled}
-      primary={primary}
       onClick={onClick}
       {...otherProps}
     >
       {label}
-    </StyledButton>
+    </button>
   );
 };
 
