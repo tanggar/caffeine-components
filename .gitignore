@@ -1,6 +1,7 @@
 node_modules
 dist
 
-storybook-static
+.vscode
 
+storybook-static
 *storybook.log
