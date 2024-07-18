@@ -4,6 +4,7 @@ import { black, blue, green, neutral, white } from "./src/tokens/palette";
 import colors from "./src/tokens/colors";
 import spacing from "./src/tokens/spacing";
 import borderRadius from "./src/tokens/border-radius";
+import { fontFamily, fontWeight } from "./src/tokens/typography";
 
 export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
@@ -20,6 +21,8 @@ export default {
     },
     spacing,
     borderRadius,
+    fontFamily,
+    fontWeight,
   },
   plugins: [],
 };

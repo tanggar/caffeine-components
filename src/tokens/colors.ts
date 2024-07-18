@@ -1,6 +1,9 @@
+import toKebabCase from "lodash.kebabcase";
 import palette from "./palette";
 
-export default {
+const colors = {
+  backgroundPage: palette.blue[900],
+  backgroundSurface: palette.neutral[100],
   contentPrimary: palette.neutral[900],
   contentSecondary: palette.neutral[700],
   accentPrimary: palette.blue[800],
@@ -8,3 +11,15 @@ export default {
   accentSecondary: palette.green[500],
   accentSecondaryHover: palette.green[700],
 };
+
+const tailwindColors = Object.entries(colors).reduce(
+  (accumulator, [key, value]) => {
+    return {
+      ...accumulator,
+      [toKebabCase(key)]: value,
+    };
+  },
+  {},
+);
+
+export default tailwindColors;

@@ -9,13 +9,13 @@ export type ButtonProps = {
 };
 
 const buttonVariants = tv({
-  base: "rounded-md py-sm px-xl cursor-pointer active:opacity-80",
+  base: "font-body rounded-md py-sm px-xl cursor-pointer active:opacity-80",
   variants: {
     type: {
       primary:
-        "bg-accentPrimary text-accentSecondary hover:bg-accentPrimaryHover",
+        "bg-accent-primary text-accent-secondary hover:bg-accent-primary-hover",
       secondary:
-        "bg-white text-accentPrimary border-2 hover:bg-accentSecondary",
+        "bg-white text-accent-primary border-2 hover:bg-accent-secondary",
     },
   },
 });
