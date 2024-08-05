@@ -2,8 +2,10 @@ import toKebabCase from "lodash.kebabcase";
 import palette from "./palette";
 
 const colors = {
+  backgroundDisabled: palette.neutral[700],
   backgroundPage: palette.blue[900],
   backgroundSurface: palette.neutral[100],
+  contentDisabled: palette.neutral[100],
   contentPrimary: palette.neutral[900],
   contentSecondary: palette.neutral[700],
   accentPrimary: palette.blue[800],

@@ -1,6 +1,7 @@
 /// <reference types="vitest" />
 
 import { defineConfig } from "vite";
+import { coverageConfigDefaults } from "vitest/config";
 import dts from "vite-plugin-dts";
 import { peerDependencies } from "./package.json";
 
@@ -20,6 +21,16 @@ export default defineConfig({
   },
   plugins: [dts()], // Uses the 'vite-plugin-dts' plugin for generating TypeScript declaration files (d.ts).
   test: {
+    coverage: {
+      exclude: [
+        "**/__docs__/**",
+        "*.config.js",
+        "src/tokens",
+        "src/index.ts",
+        "src/types/**",
+        ...coverageConfigDefaults.exclude,
+      ],
+    },
     globals: true,
     environment: "jsdom",
     setupFiles: "./setupTests.ts",
