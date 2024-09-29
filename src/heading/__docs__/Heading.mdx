@@ -1,0 +1,59 @@
+import { ArgTypes, Canvas, Meta } from "@storybook/blocks";
+import Heading from "../Heading";
+import * as HeadingStories from "./Heading.stories.tsx";
+
+<Meta of={HeadingStories} title="Heading" />
+
+# Heading
+
+Renders a heading element that follows the design tokens and type ramp.
+
+## Variants
+
+### H1
+
+<Canvas of={HeadingStories.HeadingLevel1} />
+
+### H2
+
+<Canvas of={HeadingStories.HeadingLevel2} />
+
+### H3
+
+<Canvas of={HeadingStories.HeadingLevel3} />
+
+### H4
+
+<Canvas of={HeadingStories.HeadingLevel4} />
+
+### H5
+
+<Canvas of={HeadingStories.HeadingLevel5} />
+
+### H6
+
+<Canvas of={HeadingStories.HeadingLevel6} />
+
+### As the Display Font
+
+<Canvas of={HeadingStories.HeadingAsDisplay} />
+
+## Usage
+
+```ts
+import {Heading} from "caffeine-components";
+
+const Example = () => {
+  return (
+    <Heading level={2}>
+      A Headline Goes Here
+    </Heading>
+  );
+};
+
+export default Example;
+```
+
+## Props
+
+<ArgTypes of={Heading} />
