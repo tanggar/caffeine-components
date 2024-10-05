@@ -1,4 +1,4 @@
-import "./index.css";
+import './index.css';
 
-export * from "./button/Button";
-export * from "./heading/Heading";
+export * from './button/Button';
+export * from './heading/Heading';

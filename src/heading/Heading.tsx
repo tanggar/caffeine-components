@@ -1,6 +1,6 @@
-import cx from "classnames";
-import { tv } from "tailwind-variants";
-import { CommonProps, TextSize } from "../types";
+import cx from 'classnames';
+import { tv } from 'tailwind-variants';
+import { CommonProps, TextSize } from '../types';
 
 export type HeadingProps = {
   /**
@@ -33,18 +33,18 @@ export type HeadingProps = {
 } & CommonProps;
 
 const headingVariants = tv({
-  base: "font-heading font-bold",
+  base: 'font-heading font-bold',
   variants: {
     asDisplay: {
-      true: "font-display",
+      true: 'font-display',
     },
     level: {
-      1: "text-6xl",
-      2: "text-4xl",
-      3: "text-3xl",
-      4: "text-2xl",
-      5: "text-xl",
-      6: "text-lg",
+      1: 'text-6xl',
+      2: 'text-4xl',
+      3: 'text-3xl',
+      4: 'text-2xl',
+      5: 'text-xl',
+      6: 'text-lg',
     },
   },
 });
@@ -76,7 +76,7 @@ const Heading = ({
         headingVariants({
           asDisplay,
           level,
-          class: overrides.length ? overrides.join(" ") : undefined,
+          class: overrides.length ? overrides.join(' ') : undefined,
         }),
       )}
       {...commonProps}

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export type CommonProps = {
   /**
@@ -13,13 +13,13 @@ export type CommonProps = {
 };
 
 export type TextSize =
-  | "xs"
-  | "sm"
-  | "base"
-  | "lg"
-  | "xl"
-  | "2xl"
-  | "3xl"
-  | "4xl"
-  | "5xl"
-  | "6xl";
+  | 'xs'
+  | 'sm'
+  | 'base'
+  | 'lg'
+  | 'xl'
+  | '2xl'
+  | '3xl'
+  | '4xl'
+  | '5xl'
+  | '6xl';

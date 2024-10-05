@@ -1,17 +1,17 @@
 /// <reference types="vitest" />
 
-import { defineConfig } from "vite";
-import { coverageConfigDefaults } from "vitest/config";
-import dts from "vite-plugin-dts";
-import { peerDependencies } from "./package.json";
+import { defineConfig } from 'vite';
+import { coverageConfigDefaults } from 'vitest/config';
+import dts from 'vite-plugin-dts';
+import { peerDependencies } from './package.json';
 
 export default defineConfig({
   build: {
     lib: {
-      entry: "./src/index.ts", // Specifies the entry point for building the library.
-      name: "caffeine-components", // Sets the name of the generated library.
+      entry: './src/index.ts', // Specifies the entry point for building the library.
+      name: 'caffeine-components', // Sets the name of the generated library.
       fileName: (format) => `index.${format}.js`, // Generates the output file name based on the format.
-      formats: ["cjs", "es"], // Specifies the output formats (CommonJS and ES modules).
+      formats: ['cjs', 'es'], // Specifies the output formats (CommonJS and ES modules).
     },
     rollupOptions: {
       external: [...Object.keys(peerDependencies)], // Defines external dependencies for Rollup bundling.
@@ -23,16 +23,16 @@ export default defineConfig({
   test: {
     coverage: {
       exclude: [
-        "**/__docs__/**",
-        "*.config.js",
-        "src/tokens",
-        "src/index.ts",
-        "src/types/**",
+        '**/__docs__/**',
+        '*.config.js',
+        'src/tokens',
+        'src/index.ts',
+        'src/types/**',
         ...coverageConfigDefaults.exclude,
       ],
     },
     globals: true,
-    environment: "jsdom",
-    setupFiles: "./setupTests.ts",
+    environment: 'jsdom',
+    setupFiles: './setupTests.ts',
   },
 });

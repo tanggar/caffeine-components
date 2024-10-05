@@ -1,5 +1,5 @@
-import toKebabCase from "lodash.kebabcase";
-import palette from "./palette";
+import toKebabCase from 'lodash.kebabcase';
+import palette from './palette';
 
 const colors = {
   backgroundDisabled: palette.neutral[700],
