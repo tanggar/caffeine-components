@@ -1,0 +1,47 @@
+import { ArgTypes, Canvas, Meta } from "@storybook/blocks";
+import Text from "../Text";
+import * as TextStories from "./Text.stories.tsx";
+
+<Meta of={TextStories} title="Text" />
+
+# Text
+
+Renders text that follows the design tokens and type ramp.
+
+## Variants
+
+### Default
+
+<Canvas of={TextStories.Default} />
+
+### Bolded
+
+<Canvas of={TextStories.Bolded} />
+
+### Small
+
+<Canvas of={TextStories.SmallSize} />
+
+### Large
+
+<Canvas of={TextStories.LargeSize} />
+
+## Usage
+
+```ts
+import { Text } from "caffeine-components";
+
+const Example = () => {
+  return (
+    <Text>
+      Your text goes here
+    </Text>
+  );
+};
+
+export default Example;
+```
+
+## Props
+
+<ArgTypes of={Text} />
